@@ -1,0 +1,10 @@
+{
+  "name": "root-discovery",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Repository-level helpers for Android/Kotlin project root discovery",
+  "scripts": {
+    "android-root": "node print-android-root.js || python3 print_android_root.py || sh ./print-android-root.posix.sh"
+  },
+  "androidRoot": "simple-recipe-browser-30180-30189/flutter_frontend/android"
+}

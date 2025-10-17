@@ -1,0 +1,11 @@
+steps:
+  - name: export-android-root
+    shell: bash
+    run: |
+      echo "PROJECT_ROOT=simple-recipe-browser-30180-30189/flutter_frontend/android" >> $GITHUB_ENV
+      echo "Exported PROJECT_ROOT=$PROJECT_ROOT"
+  - name: verify-android-root
+    shell: bash
+    run: |
+      test -d "simple-recipe-browser-30180-30189/flutter_frontend/android"
+      echo "Android root verified."

@@ -1,53 +1,80 @@
-#screen-splash-screen-9-385 {
-  position: relative;
-  width: 375px;
-  height: 812px;
-  overflow: hidden;
-  background-color: var(--color-ffffff); /* style_6 background */
-  border-radius: 30px; /* style_6 border radius */
+:root {
+  /* Minimal color variables used on this screen */
+  --color-ffffff: #ffffff;
+  --color-000000: #000000;
+  --color-129575: #129575; /* used for button bg from style_7 per design system (fallback here) */
 }
 
-/* Helpful reset for absolute children */
+/* Screen container (root) */
+#screen-splash-screen-9-385 {
+  position: relative;
+  width: 375px;   /* screen dimensions.width */
+  height: 812px;  /* screen dimensions.height */
+  overflow: hidden;
+  background-color: var(--color-ffffff);
+  box-sizing: border-box;
+}
+
+/* Reset box-sizing for precise sizing */
 #screen-splash-screen-9-385 * {
   box-sizing: border-box;
 }
 
-/* Background rectangle image (18:217) */
+/* Z-index layering based on JSON order */
+#img-18-217 { z-index: 1; }
+#frame-11-236 { z-index: 2; }
+#frame-9-201 { z-index: 3; }
+#button-55-928 { z-index: 4; }
+#component-10-175 { z-index: 5; }
+#component-42-612 { z-index: 6; }
+
+/* Rectangle 6 (background image) [18:217]
+   Parent: root at (11, -430)
+   Child position: left = 11 - 11 = 0, top = -430 - (-430) = 0
+*/
 #img-18-217 {
   position: absolute;
-  left: 0px;   /* 11 - 11 */
-  top: 0px;    /* (-430) - (-430) => 0, but element y is -430 so top = -430 - (-430) = 0 */
+  left: 0px;
+  top: 0px;
   width: 375px;
-  height: 823px; /* as per JSON */
+  height: 823px;
   object-fit: cover;
-  z-index: 1;
   border: none;
 }
 
-/* Frame 2 (11:236) */
+/* Frame 2 [11:236] - parent: root (11, -430)
+   left = 94 - 11 = 83, top = -326 - (-430) = 104
+*/
 #frame-11-236 {
   position: absolute;
-  left: 83px;  /* 94 - 11 */
-  top: 104px;  /* -326 - (-430) = 104 */
+  left: 83px;
+  top: 104px;
   width: 209px;
   height: 120px;
-  z-index: 2;
+  display: block; /* Using absolute children for pixel precision */
 }
+
+/* image 11 [10:200] - parent: Frame 2 at (94, -326)
+   left = 159 - 94 = 65, top = -326 - (-326) = 0
+*/
 #img-10-200 {
   position: absolute;
-  left: 76px; /* child x 159 - parent x 94 = 65; but parent offset used:
-                 child_left = 159 - 94 = 65 within frame; however we positioned frame at left 83.
-                 Inside this frame: left = 159 - 94 = 65 */
-  top: 0px;   /* -326 - (-326) = 0 (child within frame) */
+  left: 65px;
+  top: 0px;
   width: 79px;
   height: 79px;
   object-fit: cover;
   border: none;
 }
+
+/* 100K+ Premium Recipe [10:199]
+   parent Frame 2 (94, -326)
+   left = 94 - 94 = 0, top = -233 - (-326) = 93
+*/
 #text-10-199 {
   position: absolute;
-  left: 0px;     /* 94 - 94 */
-  top: 93px;     /* -233 - (-326) = 93 */
+  left: 0px;
+  top: 93px;
   width: 209px;
   height: 27px;
   margin: 0;
@@ -60,19 +87,24 @@
   color: var(--color-ffffff);
 }
 
-/* Text group (9:201) */
+/* Text group container [9:201] - parent: root
+   left = 61 - 11 = 50, top = 16 - (-430) = 446
+*/
 #frame-9-201 {
   position: absolute;
-  left: 50px; /* 61 - 11 */
-  top: 446px; /* 16 - (-430) = 446 */
+  left: 50px;
+  top: 446px;
   width: 275px;
   height: 164px;
-  z-index: 3;
 }
+
+/* Header title [9:202] - parent: Text group (61, 16)
+   left = 92 - 61 = 31, top = 16 - 16 = 0
+*/
 #text-9-202 {
   position: absolute;
-  left: 31px;  /* 92 - 61 */
-  top: 0px;    /* 16 - 16 */
+  left: 31px;
+  top: 0px;
   width: 213px;
   height: 120px;
   margin: 0;
@@ -85,10 +117,14 @@
   letter-spacing: var(--typo-62-letter-spacing, 0);
   color: var(--color-ffffff);
 }
+
+/* Caption [9:203] - parent: Text group (61, 16)
+   left = 61 - 61 = 0, top = 156 - 16 = 140
+*/
 #text-9-203 {
   position: absolute;
-  left: 0px;  /* 61 - 61 */
-  top: 140px; /* 156 - 16 */
+  left: 0px;
+  top: 140px;
   width: 275px;
   height: 24px;
   margin: 0;
@@ -101,32 +137,32 @@
   color: var(--color-ffffff);
 }
 
-/* Medium Button (55:928) */
+/* Medium Button [55:928] (INSTANCE) - parent: root
+   left = 77 - 11 = 66, top = 244 - (-430) = 674
+*/
 #button-55-928 {
   position: absolute;
-  left: 66px;  /* 77 - 11 */
-  top: 674px;  /* 244 - (-430) = 674 */
+  left: 66px;
+  top: 674px;
   width: 243px;
   height: 54px;
   border: none;
-  border-radius: 10px; /* style_7 */
-  background-color: var(--color-129575); /* style_7 */
-  cursor: pointer;
-  z-index: 4;
-  display: block;
+  border-radius: 10px;             /* style_7 */
+  background-color: var(--color-129575); /* style_7 background */
   padding: 0;
+  cursor: pointer;
 }
+
+/* Label [I55:928;55:889] - parent: button (77, 244)
+   left = 127 - 77 = 50, top = 259 - 244 = 15
+*/
 #text-I55-928-55-889 {
   position: absolute;
-  left: 61px; /* 127 - 66 */
-  top: 689px; /* 259 - (-430) = 689; but inside button we need relative:
-                 top within button = 259 - 244 = 15; left within button = 127 - 77 = 50 */
-  /* Correcting to relative within button: */
   left: 50px;
   top: 15px;
   width: 114px;
   height: 24px;
-  display: inline-block;
+  margin: 0;
   text-align: center;
   font-family: var(--typo-64-family, "Poppins", Arial, sans-serif);
   font-size: var(--typo-64-size, 16px);
@@ -135,114 +171,146 @@
   letter-spacing: var(--typo-64-letter-spacing, 0);
   color: var(--color-ffffff);
 }
+
+/* Arrow Right Component [I55:928;55:890] - parent: button (77,244)
+   left = 250 - 77 = 173, top = 261 - 244 = 17
+   Renders as <img> per SVG icon handling
+*/
 #icon-I55-928-55-890 {
   position: absolute;
-  left: 173px; /* within button: 250 - 77 = 173 */
-  top: 17px;   /* within button: 261 - 244 = 17 */
+  left: 173px;
+  top: 17px;
   width: 20px;
   height: 20px;
+  image-rendering: -webkit-optimize-contrast;
 }
 
-/* Status Bar (10:175) */
+/* Status Bar component [10:175] - parent: root
+   left = 11 - 11 = 0, top = -430 - (-430) = 0
+*/
 #component-10-175 {
   position: absolute;
-  left: 0px;         /* 11 - 11 */
-  top: 0px;          /* -430 - (-430) */
+  left: 0px;
+  top: 0px;
   width: 375px;
   height: 44px;
-  z-index: 5;
 }
-/* Symbols frame */
+
+/* Symbols frame [I10:175;128:282] - parent: Status Bar (11,-430)
+   left = 304.5 - 11 = 293.5, top = -413.4 - (-430) = 16.6
+*/
 #frame-I10-175-128-282 {
   position: absolute;
-  left: 293.5px;  /* 304.5 - 11 */
-  top: 16.6px;    /* -413.4 - (-430) = 16.6 */
+  left: 293.5px;
+  top: 16.6px;
   width: 68px;
   height: 13px;
 }
-/* Battery group placeholder */
+
+/* Battery group [I10:175;128:283] - parent: Symbols (304.5,-413.4)
+   left = 347 - 304.5 = 42.5, top = -412.84 - (-413.4) = 0.56
+*/
 #group-I10-175-128-283 {
   position: absolute;
-  left: 336px; /* 347 - 11 minus parent left offset 293.5 equals 53.5; but group is within symbols frame.
-                  Within symbols: left = 347 - 304.5 = 42.5 */
   left: 42.5px;
-  top: 0.56px;  /* -412.84 - (-413.4) = 0.56 */
+  top: 0.56px;
   width: 24.5px;
   height: 11.5px;
 }
-/* Battery inner fill rectangle (10:175;128:289) style_11: bg white, border-color #4cd964, radius 1.6 */
+
+/* Battery inner fill rectangle [I10:175;128:289] - parent: Battery group (347,-412.84)
+   left = 349 - 347 = 2, top = -410.92334 - (-412.84) = 1.91666 (~1.92)
+*/
 #rect-I10-175-128-289 {
   position: absolute;
-  left: 2px; /* 349 - 347 = 2 within battery group */
-  top: 1.92px; /* -410.9233 - (-412.84) ~ 1.92 */
+  left: 2px;
+  top: 1.92px;
   width: 18px;
   height: 7.666667px;
   background-color: var(--color-ffffff);
   border-radius: 1.6px;
-  border: 0 solid var(--color-4cd964, #4cd964);
 }
-/* Combined Signal bars (approx visuals) */
+
+/* Combined Signal bars [I10:175;128:290] - parent: Symbols (304.5,-413.4)
+   left = 304.5 - 304.5 = 0, top = -412.4 - (-413.4) = 1.0
+*/
 #bool-I10-175-128-290 {
   position: absolute;
-  left: 0px; /* 304.5 - 304.5 */
-  top: 1.0px; /* -412.4 - (-413.4) = 1.0 */
-  width: 17.1px;
-  height: 10.7px;
+  left: 0px;
+  top: 1.0px;
+  width: 17.0999908px;
+  height: 10.7000046px;
 }
-#bar-I10-175-128-291,
-#bar-I10-175-128-292,
-#bar-I10-175-128-293,
-#bar-I10-175-128-294 {
+
+/* Bars inside signal (four rectangles) - absolute within bool container
+   Using exact sizes from JSON entries 291..294, positioned to match typical signal layout
+*/
+#bar-I10-175-128-291 {
   position: absolute;
+  left: 0px;           /* x = 304.5 -> within container = 0 */
+  top: 7.7px;          /* approximate to align visual height (consistent with JSON) */
+  width: 3px;
+  height: 4px;
   background-color: var(--color-000000);
   border-radius: 1.2px;
 }
-#bar-I10-175-128-291 {
-  left: 0px;
-  top: 7.7px; /* approx */
-  width: 3px;
-  height: 4px;
-}
 #bar-I10-175-128-292 {
-  left: 4.8px;
-  top: 5.7px;
+  position: absolute;
+  left: 4.8px;         /* 309.3 - 304.5 = 4.8 */
+  top: 5.7px;          /* 6px height fits within 10.7 */
   width: 3px;
   height: 6px;
+  background-color: var(--color-000000);
+  border-radius: 1.2px;
 }
 #bar-I10-175-128-293 {
-  left: 9.4px;
-  top: 3.0px;
+  position: absolute;
+  left: 9.4px;         /* 313.9 - 304.5 = 9.4 */
+  top: 3.0px;          /* 8.3 height */
   width: 3px;
   height: 8.3px;
+  background-color: var(--color-000000);
+  border-radius: 1.2px;
 }
 #bar-I10-175-128-294 {
-  left: 14.1px;
-  top: 0px;
+  position: absolute;
+  left: 14.1px;        /* 318.6 - 304.5 = 14.1 */
+  top: 0px;            /* 10.7 height */
   width: 3px;
   height: 10.7px;
+  background-color: var(--color-000000);
+  border-radius: 1.2px;
 }
-/* Wi-Fi placeholder arc area */
+
+/* Wi-Fi area [I10:175;128:295] - parent: Symbols (304.5,-413.4)
+   left = 326.6 - 304.5 = 22.1, top = -412.6 - (-413.4) = 0.8
+   Visual placeholder box per vectors, no fill to avoid incorrect styling
+*/
 #wifi-I10-175-128-295 {
   position: absolute;
-  left: 22.1px; /* 326.6 - 304.5 */
-  top: 0.8px;   /* -412.6 - (-413.4) */
+  left: 22.1px;
+  top: 0.8px;
   width: 15.4px;
-  height: 11.06px;
+  height: 11.05721px;
   background: transparent;
 }
 
-/* Time frame and text */
+/* Time frame [I10:175;128:299] - parent: Status Bar (11,-430)
+   left = 11 - 11 = 0, top = -418 - (-430) = 12
+*/
 #frame-I10-175-128-299 {
   position: absolute;
-  left: 0px;   /* 11 - 11 */
-  top: 12px;   /* -418 - (-430) = 12 */
+  left: 0px;
+  top: 12px;
   width: 180px;
   height: 22px;
 }
+
+/* Time text [I10:175;128:300] - parent: Time frame (11,-418)
+   left = 40.5 - 11 = 29.5, top = -416 - (-418) = 2
+*/
 #text-I10-175-128-300 {
   position: absolute;
-  left: 29.5px; /* 40.5 - 11 within screen, but within frame use: 40.5 - 11 = 29.5; then subtract frame left (0): 29.5 */
-  top: 14px;    /* -416 - (-418) = 2; inside frame top 2px; plus framing adjust -> 2px; we keep 2px */
   left: 29.5px;
   top: 2px;
   width: 37px;
@@ -256,23 +324,26 @@
   color: var(--color-ffffff);
 }
 
-/* Home Indicator */
+/* Home Indicator [42:612] - parent: root
+   left = 11 - 11 = 0, top = 348 - (-430) = 778
+*/
 #component-42-612 {
   position: absolute;
-  left: 0px;   /* 11 - 11 */
-  top: 778px;  /* 348 - (-430) = 778 */
+  left: 0px;
+  top: 778px;
   width: 375px;
   height: 34px;
-  z-index: 6;
 }
+
+/* Line [I42:612;42:601] - parent: Home Indicator (11,348)
+   left = 131 - 11 = 120, top within component = 369 - 348 = 21
+*/
 #line-I42-612-42-601 {
   position: absolute;
-  left: 120px; /* 131 - 11 */
-  top:  -? ;   /* 369 - (-430) = 799; but inside component (top:778) => 799 - 778 = 21 */
   left: 120px;
   top: 21px;
   width: 135px;
   height: 5px;
   background-color: var(--color-ffffff);
-  border-radius: 100px; /* style_13 */
+  border-radius: 100px;
 }

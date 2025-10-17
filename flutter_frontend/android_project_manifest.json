@@ -1,0 +1,6 @@
+{
+  "android_project_root": "simple-recipe-browser-30180-30189/flutter_frontend/android",
+  "flutter_project_root": "simple-recipe-browser-30180-30189/flutter_frontend",
+  "gradle_settings_file": "simple-recipe-browser-30180-30189/flutter_frontend/android/settings.gradle.kts",
+  "notes": "This manifest is provided to assist analysis tools in locating the Android/Kotlin project root."
+}

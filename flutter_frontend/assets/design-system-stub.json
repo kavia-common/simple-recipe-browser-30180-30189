@@ -1,0 +1,17 @@
+{
+  "colors": {
+    "color_ffffff": "#ffffff",
+    "color_000000": "#000000",
+    "color_primary": "#e53e3e",
+    "color_secondary": "#38a169",
+    "color_4cd964": "#4cd964",
+    "color_129575": "#129575"
+  },
+  "typography": {
+    "typo_61": { "family": "Poppins", "size": "18px", "weight": 600, "lineHeight": "27px", "letterSpacing": "0" },
+    "typo_62": { "family": "Poppins", "size": "50px", "weight": 600, "lineHeight": "60px", "letterSpacing": "0" },
+    "typo_63": { "family": "Poppins", "size": "16px", "weight": 400, "lineHeight": "24px", "letterSpacing": "0" },
+    "typo_64": { "family": "Poppins", "size": "16px", "weight": 600, "lineHeight": "24px", "letterSpacing": "0" }
+  },
+  "notes": "This is a stub for documentation; actual design system integration can expand these tokens. Used by Splash Screen assets."
+}

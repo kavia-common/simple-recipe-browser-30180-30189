@@ -1,0 +1,46 @@
+{
+  "android_root": "simple-recipe-browser-30180-30189/flutter_frontend/android",
+  "alternative_roots": [
+    "./simple-recipe-browser-30180-30189/flutter_frontend/android",
+    "simple-recipe-browser-30180-30189/flutter_frontend/android"
+  ],
+  "helper_scripts": [
+    "print_android_root.sh",
+    "find_android_root.sh",
+    "print-project-root.sh",
+    "androidw",
+    "android/print-real-root.sh",
+    "ci-android-root.sh",
+    "link-android-root.sh"
+  ],
+  "manifests": [
+    "android_project_manifest.json",
+    "android-config.json",
+    "project-paths.json",
+    "workspace.roots.json",
+    "workspace.roots.yaml"
+  ],
+  "env_files": [
+    ".env.android",
+    "TOOLCHAIN_HINTS.env",
+    "android-root.profile"
+  ],
+  "markers": [
+    ".android",
+    ".kotlin",
+    ".project-root",
+    "ANDROID_PROJECT_ROOT",
+    ".android-root-path",
+    ".android-root.json",
+    ".android-roots.cache.json"
+  ],
+  "forwarder_directory": "android",
+  "real_android_contains": [
+    "settings.gradle.kts",
+    "app/build.gradle.kts",
+    "gradle/wrapper/gradle-wrapper.properties",
+    "ROOT",
+    "print-root.sh"
+  ],
+  "notes": "This index consolidates all discovery hints to assist CI/analyzers in locating the Android/Kotlin project root."
+}

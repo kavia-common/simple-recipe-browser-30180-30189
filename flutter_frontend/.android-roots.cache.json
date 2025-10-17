@@ -1,0 +1,5 @@
+{
+  "relative": "simple-recipe-browser-30180-30189/flutter_frontend/android",
+  "absolute": "${PWD}/simple-recipe-browser-30180-30189/flutter_frontend/android",
+  "notes": "If absolute is not resolved by your analyzer, use the relative path."
+}

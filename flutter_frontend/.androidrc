@@ -1,0 +1,4 @@
+# Auto-sourced Android root configuration for CI/analyzers
+export PROJECT_ROOT="simple-recipe-browser-30180-30189/flutter_frontend/android"
+export ANDROID_PROJECT_ROOT="$PROJECT_ROOT"
+echo "ANDROID PROJECT_ROOT=$PROJECT_ROOT"

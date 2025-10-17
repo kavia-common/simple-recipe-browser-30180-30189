@@ -1,0 +1,17 @@
+{
+  "project_root": ".",
+  "language": "kotlin",
+  "build_system": "gradle",
+  "wrappers": {
+    "gradle_wrapper_properties": "gradle/wrapper/gradle-wrapper.properties",
+    "gradle_wrapper_jar": "gradle/wrapper/gradle-wrapper.jar"
+  },
+  "modules": [
+    {
+      "name": "app",
+      "path": "app",
+      "build_file": "app/build.gradle.kts",
+      "android_manifest": "app/src/main/AndroidManifest.xml"
+    }
+  ]
+}

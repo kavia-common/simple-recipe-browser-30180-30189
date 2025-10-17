@@ -1,0 +1,2 @@
+export PROJECT_ROOT="simple-recipe-browser-30180-30189/flutter_frontend/android"
+export ANDROID_PROJECT_ROOT="$PROJECT_ROOT"

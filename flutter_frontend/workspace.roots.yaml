@@ -1,0 +1,11 @@
+roots:
+  - kind: android
+    path: simple-recipe-browser-30180-30189/flutter_frontend/android
+    build:
+      system: gradle
+      settings: settings.gradle.kts
+      wrapper: gradlew
+  - kind: flutter
+    path: simple-recipe-browser-30180-30189/flutter_frontend
+  - kind: web-assets
+    path: simple-recipe-browser-30180-30189/flutter_frontend/assets

@@ -1,0 +1,3 @@
+ANDROID_PROJECT_ROOT=simple-recipe-browser-30180-30189/flutter_frontend/android
+FLUTTER_PROJECT_ROOT=simple-recipe-browser-30180-30189/flutter_frontend
+# This file is used as a simple, grep-friendly hint for tools that need to locate the Kotlin/Android project root.

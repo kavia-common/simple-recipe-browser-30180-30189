@@ -1,0 +1,9 @@
+Set the Android project root explicitly in your environment before running analyzers:
+
+Linux/macOS:
+  export PROJECT_ROOT="simple-recipe-browser-30180-30189/flutter_frontend/android"
+
+Windows (PowerShell):
+  $env:PROJECT_ROOT="simple-recipe-browser-30180-30189/flutter_frontend/android"
+
+Then re-run your analyzer.

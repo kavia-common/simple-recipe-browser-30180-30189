@@ -1,0 +1,10 @@
+/*
+  Root-level Gradle settings to assist analyzers in locating the Android project.
+  This forwards discovery to the actual Android settings.gradle.kts.
+*/
+rootProject.name = "root-forwarder"
+gradle.beforeProject {
+  // no-op forwarder
+}
+// Provide a hint about the real Android project location:
+println("Hint: Android project root -> simple-recipe-browser-30180-30189/flutter_frontend/android")

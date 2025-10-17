@@ -1,0 +1,3 @@
+# Marker file for tooling
+# Presence of this file indicates this directory is the Android/Kotlin project root.
+# Detected by CI/analyzers that scan for standard markers.

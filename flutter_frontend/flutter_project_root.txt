@@ -1,0 +1,4 @@
+This directory is the Flutter project root.
+Run Flutter commands (e.g., `flutter pub get`, `flutter build`) from this folder.
+
+pubspec.yaml lives here.

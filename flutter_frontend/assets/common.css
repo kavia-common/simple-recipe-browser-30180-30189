@@ -1,0 +1,56 @@
+:root {
+  /* Colors (fallbacks when design_system.json not available) */
+  --color-ffffff: #ffffff;
+  --color-000000: #000000;
+  --color-primary: #e53e3e;
+  --color-secondary: #38a169;
+  --color-4cd964: #4cd964;
+  --color-129575: #129575;
+
+  /* Typography (only the ones referenced on this screen; provide sensible defaults) */
+  --typo-61-family: "Poppins", Arial, sans-serif;
+  --typo-61-size: 18px;
+  --typo-61-weight: 600;
+  --typo-61-line-height: 27px;
+  --typo-61-letter-spacing: 0;
+
+  --typo-62-family: "Poppins", Arial, sans-serif;
+  --typo-62-size: 50px;
+  --typo-62-weight: 600;
+  --typo-62-line-height: 60px;
+  --typo-62-letter-spacing: 0;
+
+  --typo-63-family: "Poppins", Arial, sans-serif;
+  --typo-63-size: 16px;
+  --typo-63-weight: 400;
+  --typo-63-line-height: 24px;
+  --typo-63-letter-spacing: 0;
+
+  --typo-64-family: "Poppins", Arial, sans-serif;
+  --typo-64-size: 16px;
+  --typo-64-weight: 600;
+  --typo-64-line-height: 24px;
+  --typo-64-letter-spacing: 0;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Global resets useful for pixel precision */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* aids visibility around the 375x812 artboard */
+}
+
+img {
+  display: block;
+}

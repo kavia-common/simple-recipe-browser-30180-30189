@@ -1,0 +1,6 @@
+This is the Android/Kotlin project root.
+Canonical path: simple-recipe-browser-30180-30189/flutter_frontend/android
+Contains:
+- settings.gradle.kts
+- app/build.gradle.kts
+- gradle/wrapper/gradle-wrapper.properties

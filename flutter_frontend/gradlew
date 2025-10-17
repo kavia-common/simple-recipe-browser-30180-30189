@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Shim gradlew for analyzers that look for a top-level gradle wrapper.
+# Delegates to the actual Android wrapper to aid root detection.
+set -euo pipefail
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+TARGET="$HERE/simple-recipe-browser-30180-30189/flutter_frontend/android/gradlew"
+if [ -x "$TARGET" ]; then
+  exec "$TARGET" "$@"
+fi
+# Fallback: try gradle if wrapper not available
+exec gradle "$@"

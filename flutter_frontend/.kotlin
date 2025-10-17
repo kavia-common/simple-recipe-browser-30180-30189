@@ -1,0 +1,3 @@
+language=kotlin
+build_system=gradle
+android_project_root=simple-recipe-browser-30180-30189/flutter_frontend/android

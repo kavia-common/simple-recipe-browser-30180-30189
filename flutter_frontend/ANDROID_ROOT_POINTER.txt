@@ -1,0 +1,4 @@
+ANDROID_ROOT=simple-recipe-browser-30180-30189/flutter_frontend/android
+ANDROID_PROJECT_ROOT=simple-recipe-browser-30180-30189/flutter_frontend/android
+PROJECT_ROOT=simple-recipe-browser-30180-30189/flutter_frontend/android
+REAL_ANDROID_ROOT=simple-recipe-browser-30180-30189/flutter_frontend/android

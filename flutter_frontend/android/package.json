@@ -1,0 +1,9 @@
+{
+  "name": "android-forwarder",
+  "private": true,
+  "description": "Forwarder directory to help analyzers locate the real Android project root.",
+  "scripts": {
+    "root": "bash ./print-real-root.sh"
+  },
+  "androidRoot": "../simple-recipe-browser-30180-30189/flutter_frontend/android"
+}

@@ -1,0 +1,11 @@
+{
+  "android_root": "simple-recipe-browser-30180-30189/flutter_frontend/android",
+  "validate": {
+    "exists": [
+      "simple-recipe-browser-30180-30189/flutter_frontend/android/settings.gradle.kts",
+      "simple-recipe-browser-30180-30189/flutter_frontend/android/app/build.gradle.kts",
+      "simple-recipe-browser-30180-30189/flutter_frontend/android/gradle/wrapper/gradle-wrapper.properties"
+    ]
+  },
+  "notes": "Config to aid CI/analyzers in locating Android/Kotlin project root."
+}

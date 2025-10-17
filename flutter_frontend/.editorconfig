@@ -1,0 +1,12 @@
+root = true
+
+[*.{gradle,kts,properties}]
+indent_style = space
+indent_size = 2
+
+[android/**]
+# Hint that android under repo is a forwarder; real path noted
+android_root = simple-recipe-browser-30180-30189/flutter_frontend/android
+
+[*.md]
+max_line_length = off

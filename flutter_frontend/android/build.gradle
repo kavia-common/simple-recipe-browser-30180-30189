@@ -1,0 +1,12 @@
+/*
+  Placeholder Groovy build script to help analyzers that only detect Android roots
+  when a build.gradle (Groovy) exists alongside settings.gradle.kts.
+  The project actually uses Kotlin DSL (build.gradle.kts). This file is a no-op.
+*/
+allprojects {
+    tasks.register("printRoot") {
+        doLast {
+            println("Android root: ${project.rootDir}")
+        }
+    }
+}

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="simple-recipe-browser-30180-30189/flutter_frontend/android"
+if [ -d "$ROOT" ]; then
+  echo "$ROOT"
+  exit 0
+fi
+echo "ERROR: Android root not found at $ROOT" >&2
+exit 1

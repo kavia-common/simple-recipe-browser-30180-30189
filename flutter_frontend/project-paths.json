@@ -1,0 +1,16 @@
+{
+  "android": {
+    "root": "simple-recipe-browser-30180-30189/flutter_frontend/android",
+    "settings": "simple-recipe-browser-30180-30189/flutter_frontend/android/settings.gradle.kts",
+    "wrapper": "simple-recipe-browser-30180-30189/flutter_frontend/android/gradlew"
+  },
+  "flutter": {
+    "root": "simple-recipe-browser-30180-30189/flutter_frontend"
+  },
+  "web_assets": {
+    "root": "simple-recipe-browser-30180-30189/flutter_frontend/assets",
+    "splash_html": "simple-recipe-browser-30180-30189/flutter_frontend/assets/splash-screen-9-385.html",
+    "splash_css": "simple-recipe-browser-30180-30189/flutter_frontend/assets/splash-screen-9-385.css",
+    "splash_js": "simple-recipe-browser-30180-30189/flutter_frontend/assets/splash-screen-9-385.js"
+  }
+}

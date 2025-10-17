@@ -1,0 +1,8 @@
+// JSON5 configuration for Android root discovery
+{
+  android_root: 'simple-recipe-browser-30180-30189/flutter_frontend/android',
+  wrappers: {
+    gradle: 'simple-recipe-browser-30180-30189/flutter_frontend/android/gradlew'
+  },
+  settings: 'simple-recipe-browser-30180-30189/flutter_frontend/android/settings.gradle.kts'
+}
